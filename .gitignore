@@ -4,3 +4,4 @@ audio_files
 *.wav
 *.pcm
 __pycache__
+*.zip

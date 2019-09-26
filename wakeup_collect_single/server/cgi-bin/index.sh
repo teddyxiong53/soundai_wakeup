@@ -3,3 +3,4 @@ echo ""
 
 /data/audio_record.sh
 
+echo "index.sh"

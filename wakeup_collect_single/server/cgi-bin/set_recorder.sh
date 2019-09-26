@@ -35,3 +35,5 @@ echo -n $age > $target/age
 echo -n $gender > $target/gender
 echo -n $province > $target/province
 echo -n $time > $target/time
+
+echo "set_recorder.sh"

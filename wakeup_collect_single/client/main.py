@@ -18,7 +18,8 @@ import logging
 from ping_alive import ping_all,my_scan_port
 import mycsv
 
-g_local_debug = True
+g_local_debug = False
+g_debug_only_one = False
 
 all_machines_in_lan = []
 machines_open_80_port = []
