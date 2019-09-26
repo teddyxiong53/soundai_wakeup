@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOSS语料采集</title>
+</head>
+<body>
+    <h1>请在听到提示后开始录音。</h1>
+    <p>录音持续10s。请大声说出“小禾小禾”（xiaohexiaohe）。</p>
+    <p>说完后，停顿2秒左右，再继续重复，直到录音完成</p>
+    <p>录音完成时，有语音提示。</p>
+    <form action="/cgi-bin/record.sh" method="GET">
+        请填入3位数的工号（例如1号，写成001）
+        工号：<input type="text" name="userid" id="">
+        <button type="submit">开始录音</button>
+    </form>
+</body>
+</html>
