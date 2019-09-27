@@ -1,6 +1,7 @@
 echo  "Content-type:text/html"
 echo ""
 
-/data/audio_record.sh
+touch /data/lighttpd/www/cgi-bin/begin_record
+
 
 echo "index.sh"

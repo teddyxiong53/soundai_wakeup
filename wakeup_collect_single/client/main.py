@@ -65,9 +65,9 @@ def download_audio_file(ip_addr):
     global  g_recording, g_cur_target_dir
     global g_down_finish_one, g_down_finish_three, g_down_finish_five
 
-    target = "http://{}/cgi-bin/output/1.pcm"
+    target = "http://{}/cgi-bin/output/{}.pcm".format(ip_addr, g_recorder_id)
     # print(target)
-    filename="1.pcm"
+    filename="{}.pcm".format(g_recorder_id)
     try:
         r = requests.get(url=target, stream=False)
         local_file = ""
@@ -79,6 +79,7 @@ def download_audio_file(ip_addr):
             local_file = "{}/5m/{}".format(g_cur_target_dir,filename)
         f = open(local_file, "wb")
         f.write(r.content)
+        f.close()
     except:
         logging.error('download {} fail'.format(target))
 
@@ -439,6 +440,7 @@ class MainWindow(wx.Frame):
         g_recorder_gender = gender
         g_recorder_province = province
         g_recorder_time = time
+        self.statusText.SetValue("")
         try:
             if not g_local_debug:
                 pattern="http://{}"  + "/cgi-bin/set_recorder.sh?id=" + id + "&age=" + age + "&gender=" + gender + "&province=" + province + "&time=" + time_len
@@ -459,11 +461,11 @@ class MainWindow(wx.Frame):
             目录结构示例：
             001_1_28_hunan
                 1m
-                    1.pcm
+                    001.pcm
                 3m
-                    1.pcm
+                    001.pcm
                 5m
-                    1.pcm
+                    001.pcm
                 mobile
                     *.pcm
                     *.txt

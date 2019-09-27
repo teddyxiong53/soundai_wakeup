@@ -20,6 +20,7 @@ mount --bind  /data/etc/lighttpd/  /etc/lighttpd/
 
 /etc/init.d/S50lighttpd restart
 
-
-
+sleep 1
+/data/wait_to_record.sh &
+/data/wait_to_stop_record.sh &
 

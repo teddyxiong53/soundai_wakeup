@@ -16,7 +16,8 @@ adb push dirlisting.conf /data/etc/lighttpd/conf.d
 adb push cgi.conf /data/etc/lighttpd/conf.d
 
 rem step 3. push script
-REM adb push ./wait_to_record.sh /data
+adb push ./wait_to_record.sh /data
+adb push ./wait_to_stop_record.sh /data
 adb push ./start_httpd.sh /data
 adb push ./after_app.sh /data
 adb push ./audio_record.sh /data

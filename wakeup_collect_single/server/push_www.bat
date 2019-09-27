@@ -8,5 +8,10 @@ adb push resources /data/lighttpd
 
 
 adb push audio_record.sh /data
-adb shell chmod 777 /data/audio_record.sh
+adb push start_httpd.sh /data
+
+adb push wait_to_stop_record.sh /data
+
+adb shell chmod 777 -R /data/
+
 

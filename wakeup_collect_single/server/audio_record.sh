@@ -27,4 +27,6 @@ fi
 
 
 #echo $filename
-arecord  -t raw -f S16_LE -c 8 -r 16000  /data/lighttpd/www/cgi-bin/output/1.pcm &
+arecord  -t raw -f S16_LE -c 8 -r 16000  /data/lighttpd/www/cgi-bin/output/$id.pcm
+chmod 777 -R /data/lighttpd/www/cgi-bin/output/
+
