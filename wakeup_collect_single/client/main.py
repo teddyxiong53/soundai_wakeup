@@ -317,6 +317,7 @@ class MainWindow(wx.Frame):
         t1.join()
         t2.join()
         t3.join()
+        self.statusText.SetValue("已经开始录音")
         g_recording = True
 
     def onBtnDetect(self,event):
