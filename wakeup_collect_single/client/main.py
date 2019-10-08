@@ -132,7 +132,7 @@ class MainWindow(wx.Frame):
         self.Bind(wx.EVT_BUTTON, self.onBtnDetect, self.btnDetect)
         layout_upper.Add(self.btnDetect, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
-        labelHint = wx.StaticText(self, label="这一步比较耗时，执行时界面会无响应只需要执行一次，请耐心等待")
+        labelHint = wx.StaticText(self, label="有些比较耗时，执行时界面会无响应，请耐心等待，不要关闭窗口")
         layout_upper.Add(labelHint, 0, wx.ALIGN_CENTER_VERTICAL, 0)
         layout_upper.AddSpacer(50)
         return layout_upper
@@ -235,9 +235,9 @@ class MainWindow(wx.Frame):
 
     def ui_bottom(self):
         layout_bottom = wx.BoxSizer(wx.HORIZONTAL)
-        self.btnStartRecord = wx.Button(self, wx.NewId(), '开始测试')
+        self.btnStartRecord = wx.Button(self, wx.NewId(), '开始录音')
         layout_bottom.Add(self.btnStartRecord, 0, wx.ALIGN_CENTER_VERTICAL, 0)
-        self.btnDownload = wx.Button(self, wx.NewId(), '停止录音并下载文件到电脑，然后手动拷贝手机文件到电脑目录下')
+        self.btnDownload = wx.Button(self, wx.NewId(), '停止录音')
         layout_bottom.Add(self.btnDownload, 0, wx.ALIGN_CENTER_VERTICAL, 0)
         self.Bind(wx.EVT_BUTTON, self.onStartRecord, self.btnStartRecord)
         self.Bind(wx.EVT_BUTTON, self.onBtnDownload, self.btnDownload)
